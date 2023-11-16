@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# MyCalc - React Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MyCalc is a feature-rich calculator web application developed using React.js and styled with Tailwind CSS. It provides a range of functionalities, including basic arithmetic operations, support for parentheses, and a toggle theme for dark and light modes.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+Toggle Theme: Switch between dark and light modes for a personalized experience.
+Basic Arithmetic Operations: Addition, subtraction, multiplication, and division.
+Parentheses Support: Perform complex calculations with ease using parentheses.
+Key Functionality: Use keyboard keys for quick input and calculations.
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![MyCalc Dark Theme](https://drive.google.com/file/d/18Fs81OhQ43BOMmIWO1n_AhHvH3XZc2oB/view?usp=sharing)
+*Dark Theme*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![MyCalc Light Theme](https://drive.google.com/file/d/1sU3ZbpLh5u9SUftli_-UxUhgqaB8Pi4N/view?usp=sharing)
+*Light Theme*
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
+1. React.js
+2. Tailwind CSS
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to set up and run MyCalc locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/MyCalc.git
 
-### `npm run eject`
+2. Navigate to the project directory:
+   ```bash
+   cd MyCalc
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
+   ```bash
+   npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Run the Application:
+   ```bash
+   npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Open your browser and go to http://localhost:3000 to view MyCalc.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
+Enter expressions using the provided buttons.
+Toggle between dark and light themes.
+Use parentheses to group expressions.
 
-## Learn More
+## Contributing
+If you'd like to contribute to MyCalc, feel free to reach out to me...
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
