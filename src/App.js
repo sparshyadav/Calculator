@@ -14,7 +14,8 @@ function App() {
     else if (buttonValue === '=') {
       try {
         setPreviousValue(value);
-        setValue(eval(value).toString());
+        const result = new Function('return ' + value)();
+        setValue(result.toString());
       }
       catch (error) {
         setValue("Error");
@@ -48,6 +49,24 @@ function App() {
     }
   }
 
+  function keyHander(e){
+    if(e.key==='Enter'){
+      buttonClickHandler('=')
+    }
+    else if(e.key==='Escape'){
+      buttonClickHandler('AC')
+    }
+    else if(e.key==='Backspace'){
+      buttonClickHandler('DEL')
+    }
+    else if(e.key===')' || e.key==='('){
+      bracketHandler();
+    }
+    else if(/[0-9+\-*/.%]/.test(e.key)){
+      buttonClickHandler(e.key);
+    }
+  }
+
   return (
     <div className={`w-full h-full flex flex-col justify-center items-center ${!dark ? 'bg-[#f3f3f6]' : 'bg-[#1E1C27]'}`}>
       <div className={`w-full flex justify-between items-centerbg ${dark ? 'bg-[#262837]' : 'bg-[#efeff2]'}`}>
@@ -66,26 +85,26 @@ function App() {
             <div className='pb-4 pr-4 pt-2 text-2xl'>{value}</div>
           </div>
           <div className={`${dark ? 'bg-[#161420]' : 'bg-[#F2F2F7]'} flex justify-center items-center flex-wrap gap-3 py-4 rounded-b-lg`}>
-            <button className='bg-[#F5955F] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('AC')}>AC</button>
-            <button className='bg-[#525298] h-20 w-20 rounded-md' onClick={bracketHandler}>()</button>
-            <button className='bg-[#525298] h-20 w-20 rounded-md' onClick={() => buttonClickHandler('%')}>%</button>
-            <button className='bg-[#525298] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('/')}>/</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('7')}>7</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('8')}>8</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('9')}>9</button>
-            <button className='bg-[#525298] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('*')}>*</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('4')}>4</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('5')}>5</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('6')}>6</button>
-            <button className='bg-[#525298] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('-')}>-</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('1')}>1</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('2')}>2</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('3')}>3</button>
-            <button className='bg-[#525298] h-20 w-20 rounded-md' onClick={() => buttonClickHandler('+')}>+</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('0')}>0</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('.')}>.</button>
-            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('DEL')}>DEL</button>
-            <button className='bg-[#F5955F] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('=')}>=</button>
+            <button className='bg-[#F5955F] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('AC')} onKeyDown={keyHander}>AC</button>
+            <button className='bg-[#525298] h-20 w-20 rounded-md' onClick={bracketHandler} onKeyDown={keyHander}>()</button>
+            <button className='bg-[#525298] h-20 w-20 rounded-md' onClick={() => buttonClickHandler('%')} onKeyDown={keyHander}>%</button>
+            <button className='bg-[#525298] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('/')} onKeyDown={keyHander}>/</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('7')} onKeyDown={keyHander}>7</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('8')} onKeyDown={keyHander}>8</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('9')} onKeyDown={keyHander}>9</button>
+            <button className='bg-[#525298] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('*')} onKeyDown={keyHander}>*</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('4')} onKeyDown={keyHander}>4</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('5')} onKeyDown={keyHander}>5</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('6')} onKeyDown={keyHander}>6</button>
+            <button className='bg-[#525298] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('-')} onKeyDown={keyHander}>-</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('1')} onKeyDown={keyHander}>1</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('2')} onKeyDown={keyHander}>2</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('3')} onKeyDown={keyHander}>3</button>
+            <button className='bg-[#525298] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('+')} onKeyDown={keyHander}>+</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('0')} onKeyDown={keyHander}>0</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('.')} onKeyDown={keyHander}>.</button>
+            <button className={`h-20 w-20 rounded-md text-xl ${dark ? 'bg-[#262837] text-white' : 'bg-[#FFFFFF] text-black'}`} onClick={() => buttonClickHandler('DEL')} onKeyDown={keyHander}>DEL</button>
+            <button className='bg-[#F5955F] h-20 w-20 rounded-md text-xl' onClick={() => buttonClickHandler('=')} onKeyDown={keyHander}>=</button>
           </div>
         </div>
       </div>
