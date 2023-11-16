@@ -11,7 +11,8 @@ Key Functionality: Use keyboard keys for quick input and calculations.
 
 ## Screenshots
 
-![DarkTheme Calculator](https://github.com/sparshyadav/MyCalc/assets/96286051/ae380951-7f68-47fe-81bb-eabe54ad9a82)
+![DarkTheme Calculator](https://github.com/sparshyadav/MyCalc/assets/96286051/214e0082-83e8-4575-963f-d7f9e730c1c5)
+
 
 *Dark Theme*
 
