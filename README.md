@@ -11,7 +11,7 @@ Key Functionality: Use keyboard keys for quick input and calculations.
 
 ## Screenshots
 
-![MyCalc Dark Theme](https://github.com/sparshyadav/MyCalc/blob/main/DarkTheme%20Calculator.png)
+[https://drive.google.com/file/d/18Fs81OhQ43BOMmIWO1n_AhHvH3XZc2oB/view?usp=sharing](url)
 *Dark Theme*
 
 ![MyCalc Light Theme](https://github.com/sparshyadav/MyCalc/blob/main/LightTheme%20Calculator.png)
