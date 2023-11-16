@@ -79,7 +79,7 @@ function App() {
         </div>
       </div>
       <div className="w-full h-full flex justify-center items-center">
-        <div className='mt-8 flex flex-col w-[380px] max-sm:w-[300px] m:w-[380px]  lg:w-[380px xl:w-[380px] rounded-md mb-14 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'>
+        <div className='mt-8 flex flex-col w-[380px] max-sm:w-[320px] m:w-[380px]  lg:w-[380px xl:w-[380px] rounded-md mb-14 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'>
           <div className={`flex flex-col items-end ${dark ? 'bg-[#262837]' : 'bg-[#FFFFFF]'} w-[8%] min-w-full h-[100px] rounded-lg`}>
             <div className={`pt-2 pr-4 opacity-50 ${dark ? 'text-white' : 'text-black'}`}>{previousValue}</div>
             <div className={`pb-4 pr-4 pt-2 text-2xl ${dark ? 'text-white' : 'text-black'}`}>{value}</div>
