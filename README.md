@@ -11,10 +11,10 @@ Key Functionality: Use keyboard keys for quick input and calculations.
 
 ## Screenshots
 
-![MyCalc Dark Theme](https://drive.google.com/file/d/18Fs81OhQ43BOMmIWO1n_AhHvH3XZc2oB/view?usp=sharing)
+![MyCalc Dark Theme](https://github.com/sparshyadav/MyCalc/blob/main/DarkTheme%20Calculator.png)
 *Dark Theme*
 
-![MyCalc Light Theme](https://drive.google.com/file/d/1sU3ZbpLh5u9SUftli_-UxUhgqaB8Pi4N/view?usp=sharing)
+![MyCalc Light Theme](https://github.com/sparshyadav/MyCalc/blob/main/LightTheme%20Calculator.png)
 *Light Theme*
 
 
