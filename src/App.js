@@ -79,7 +79,7 @@ function App() {
         </div>
       </div>
       <div className="w-full h-full flex justify-center items-center">
-        <div className='mt-16 flex flex-col w-[25%] rounded-md mb-14 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]'>
+        <div className='mt-8 flex flex-col w-[380px] rounded-md mb-14 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]'>
           <div className={`flex flex-col items-end ${dark ? 'bg-[#262837]' : 'bg-[#FFFFFF]'} w-[8%] min-w-full h-[100px] rounded-lg`}>
             <div className={`pt-2 pr-4 opacity-50 ${dark ? 'text-white' : 'text-black'}`}>{previousValue}</div>
             <div className={`pb-4 pr-4 pt-2 text-2xl ${dark ? 'text-white' : 'text-black'}`}>{value}</div>
