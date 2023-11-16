@@ -32,8 +32,18 @@ Follow these steps to set up and run MyCalc locally:
    git clone https://github.com/your-username/MyCalc.git
 
 2. Navigate to the project directory:
-   
+   ```bash
    cd MyCalc
+
+3. Install dependencies:
+   ```bash
+   npm install
+
+4. Run the Application:
+   ```bash
+   npm start
+
+5. Open your browser and go to http://localhost:3000 to view MyCalc.
 
 ## Usage
 Enter expressions using the provided buttons.
