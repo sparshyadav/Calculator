@@ -1,4 +1,3 @@
-import './App.css';
 import { useState } from 'react';
 
 function App() {
@@ -29,12 +28,12 @@ function App() {
 
   return (
     <div className="w-full h-full flex justify-center items-center">
-      <div className='mt-36 flex flex-col w-[25%] rounded-md mb-14'>
-        <div className='flex flex-col items-end bg-[#262837] w-[8%] min-w-full h-20 rounded-lg'>
-          <div className='pt-2 pr-4'>{previousValue}</div>
+      <div className='mt-36 flex flex-col w-[25%] rounded-md mb-14 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]'>
+        <div className='flex flex-col items-end bg-[#262837] w-[8%] min-w-full h-[100px] rounded-lg'>
+          <div className='pt-2 pr-4 opacity-50'>{previousValue}</div>
           <div className='pb-4 pr-4 pt-2 text-2xl'>{value}</div>
         </div>
-        <div className='bg-[#161420] flex justify-center items-center flex-wrap gap-3 mb-6 py-4 rounded-b-lg'>
+        <div className='bg-[#161420] flex justify-center items-center flex-wrap gap-3 py-4 rounded-b-lg'>
           <button className='bg-[#F5955F] h-20 w-20 rounded-md' onClick={() => buttonClickHandler('AC')}>AC</button>
           <button className='bg-[#525298] h-20 w-20 rounded-md' onClick={() => buttonClickHandler('')}>()</button>
           <button className='bg-[#525298] h-20 w-20 rounded-md' onClick={() => buttonClickHandler('%')}>%</button>
